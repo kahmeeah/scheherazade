@@ -3,6 +3,9 @@ import CoolUnderline from '../components/CoolUnderline';
 import './01scene.css'
 import gsap from 'gsap';
 
+import tellVideoUrl from '../assets/scenes/tellVid.mp4';
+import dreamVideoUrl from '../assets/scenes/dreamVid3.mp4';
+
 export default function Scene_01({ next }) {
     // iniate variables to set later
     const tellRef = useRef(null) 
@@ -54,14 +57,7 @@ export default function Scene_01({ next }) {
             opacity: 0,
             duration: 1,
             ease: 'power2.in',
-            onComplete: () => {
-                toggle_showDreamVid(true)
-                setTimeout(()=>{
-                    toggle_showDreamVid(false)
-                    dreamFinished.current = true
-                    checkBothDone()
-                }, 1500) // prolly change to variable or manually set vid length here
-            },
+            onComplete: () => toggle_showDreamVid(true)
         })
     }
 
@@ -90,14 +86,42 @@ export default function Scene_01({ next }) {
 
         {/* display these when showTellVid is true  */}
         {showTellVid && (
-             <div className='overlay' id='tellVid'>hi heheheh</div>
+             <video
+          src={tellVideoUrl}
+          autoPlay
+          muted
+          playsInline
+          className='overlay'
+          id='tellVid'
+          onEnded={() => {
+            tellFinished.current = true;
+            checkBothDone();
+            toggle_showTellVid(false)
+          }}
+        />
         )}
 
 
         {/* display these when showDreamVid is true  */}
         {showDreamVid && (
-             <div className='overlay' id='dreamVid'>hi dream</div>
+             <video
+          src={dreamVideoUrl}
+          autoPlay
+          muted
+          playsInline
+          className='overlay'
+          id='dreamVid'
+          onEnded={() => {
+            dreamFinished.current = true;
+            checkBothDone();
+            toggle_showDreamVid(false)
+          }}
+        />
         )}
+
+        
+
+
 
 
 
