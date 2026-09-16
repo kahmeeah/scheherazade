@@ -6,6 +6,7 @@ import { Draggable } from 'gsap/Draggable';
 
 import lakeUrl from '../assets/scenes/lake.png'
 import angelUrl from '../assets/scenes/angel.png'
+import shirtUrl from '../assets/scenes/shirt.png'
 import { useEffect } from 'react';
 
 export default function Scene_02({ next }) {
@@ -29,6 +30,8 @@ export default function Scene_02({ next }) {
       <img src={lakeUrl} alt="lake Scene" className="scene-layer bg-layer" />
 
       <img src={angelUrl} alt="angel" className="scene-layer angel-layer" />
+
+      <img src={shirtUrl} alt="shirt" className="scene-layer shirt-layer" />
 
       <div className='scene-layer text-layer'>
         <div>where we pull the bodies out of the lake</div>

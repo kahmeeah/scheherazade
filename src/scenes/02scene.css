@@ -34,6 +34,18 @@
   cursor: grab;
 }
 
+.shirt-layer {
+  position: absolute;
+  width: 100px;
+  height: auto; 
+  
+  left: 6%;
+  top: 68%;
+  
+  z-index: 991;
+  cursor: grab;
+}
+
 .text-layer{
     z-index: 99;
 }
