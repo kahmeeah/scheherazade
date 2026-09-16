@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     // global components can go hereeee
-    <div className="film-gate">
+    <div className="film-jitter">
       {scene === 1 && <Scene_01 next={() => setScene(2)} />}
       {scene === 2 && <Scene_02 next={() => setScene(3)} />}
       {scene === 3 && <Scene_03 next={() => setScene(1)} />}
