@@ -1,12 +1,28 @@
 // import { useRef, useState } from 'react';
 // import CoolUnderline from '../components/CoolUnderline';
 import './02scene.css'
-// import gsap from 'gsap';
+import gsap from 'gsap';
+import { Draggable } from 'gsap/Draggable';
 
 import lakeUrl from '../assets/scenes/lake.png'
 import angelUrl from '../assets/scenes/angel.png'
+import { useEffect } from 'react';
 
 export default function Scene_02({ next }) {
+
+  gsap.registerPlugin(Draggable) 
+
+
+  useEffect(()=>{
+      Draggable.create('.angel-layer', {
+      type: 'y'
+    });
+
+
+  })
+
+
+
   return (
     <section className="scene-02 scene">
 
