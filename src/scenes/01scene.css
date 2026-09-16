@@ -21,4 +21,9 @@
 }
 
 
-
+/* #tell, #dream {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 4px;
+} */

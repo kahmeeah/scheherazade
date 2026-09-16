@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import CoolUnderline from '../components/CoolUnderline';
 import './01scene.css'
 import gsap from 'gsap';
 
@@ -65,22 +66,26 @@ export default function Scene_01({ next }) {
     }
 
 
+
+
   return (
     <section className="scene scene-01">
         <div>
-            <span 
+            <CoolUnderline 
             id='tell'
             ref={tellRef} // sets variable to this span element
             onClick={handleTellFall} // call handleTellFall on click
-            >tell me</span> 
+            >tell me
+            </CoolUnderline> 
         
             {' '}about the {' '}
             
-            <span 
+            <CoolUnderline 
             id='dream'
             ref={dreamRef} // sets variable to this span element
             onClick={handleDreamFall} // call handleDreamFall on click
-            >dream</span>
+            >dream
+            </CoolUnderline>
         </div>
 
         {/* display these when showTellVid is true  */}
