@@ -15,6 +15,7 @@
   height: 100%;
   object-fit: cover;
   user-select: none;
+  -webkit-user-drag: none;
 }
 
 .bg-layer {
