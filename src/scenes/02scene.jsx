@@ -16,7 +16,13 @@ export default function Scene_02({ next }) {
 
   useEffect(()=>{
       Draggable.create('.angel-layer', {
-      type: 'y'
+      type: 'y',
+      inertia: true
+    });
+
+    Draggable.create('.shirt-layer', {
+      inertia: true
+      
     });
 
 
