@@ -1,0 +1,26 @@
+.scene-01 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* align-self: start;  */
+}
+
+
+.scene-01 button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #0d0d0d;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scene-01 #tell, .scene-01 #dream{
+    cursor: pointer;
+}
+
+span{
+    all: unset;
+    display: inline-block;
+}
